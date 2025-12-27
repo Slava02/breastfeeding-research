@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/breastfeeding-research/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Исследование грудного вскармливания: по требованию или по расписанию? Анализ научных данных и рекомендаций." />
+    <meta name="keywords" content="грудное вскармливание, кормление по требованию, кормление по расписанию, ВОЗ, AAP, исследование" />
+    <meta property="og:title" content="Грудное вскармливание: По требованию или по расписанию?" />
+    <meta property="og:description" content="Научное исследование подходов к кормлению младенцев на основе 75+ авторитетных источников." />
+    <meta property="og:type" content="website" />
+    <title>Грудное вскармливание: По требованию или по расписанию?</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --primary: #3B82F6;
+        --secondary: #10B981;
+        --accent: #F59E0B;
+        --danger: #EF4444;
+        --background: #F9FAFB;
+        --surface: #FFFFFF;
+        --text-primary: #1F2937;
+        --text-secondary: #6B7280;
+        --border: #E5E7EB;
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background-color: var(--background);
+        color: var(--text-primary);
+      }
+      
+      .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      }
+      
+      .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 3rem;
+        height: 3rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+      
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .scroll-to-top:hover {
+        background: #2563EB;
+        transform: translateY(-2px);
+      }
+      
+      .section-fade {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+      
+      .section-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .timeline-item {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+      }
+      
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .hormone-bar-fill {
+        transition: width 1.5s ease;
+      }
+      
+      .iq-bar-fill {
+        transition: width 1.5s ease;
+      }
+      
+      .composition-bar-fill {
+        transition: width 1.5s ease;
+      }
+      
+      .age-difference {
+        transition: width 1.5s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Main App Component -->
+    <script type="text/babel" src="/src/App.jsx"></script>
+    
+    <!-- Data -->
+    <script src="/src/data/timeline.js"></script>
+    <script src="/src/data/organizations.js"></script>
+    <script src="/src/data/faq.js"></script>
+    <script src="/src/data/sources.js"></script>
+    <script src="/src/data/statistics.js"></script>
+    
+    <!-- Components -->
+    <script type="text/babel" src="/src/components/layout/Navbar.jsx"></script>
+    <script type="text/babel" src="/src/components/layout/Footer.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/HeroSection.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/TimelineSection.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/OrganizationsSection.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/ScienceSection.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/FAQSection.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/SourcesSection.jsx"></script>
+    <script type="text/babel" src="/src/components/sections/ConclusionSection.jsx"></script>
+    
+    <!-- Initialize App -->
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(React.createElement(App));
+    </script>
+  </body>
+</html>
